@@ -36,7 +36,6 @@ const App = () => {
     );
 
     let data = await res.json();
-    console.log(data);
     data = JSON.parse(data);
 
     const details = data.cnmtDetail[0];
