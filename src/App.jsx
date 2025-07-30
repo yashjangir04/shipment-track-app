@@ -77,7 +77,7 @@ const App = () => {
 
   return (
     <div>
-      <div className="back-img md:p-0 p-10 w-full h-screen grid place-items-center poppins-medium overflow-hidden relative">
+      <div className="back-img md:p-0 p-10 bg-cover md:bg-contain w-full h-screen grid place-items-center poppins-medium overflow-hidden relative">
         <div className="track-box w-full md:w-1/3 bg-[#fff] backdrop-blur-md border-white/20 shadow-lg">
           <div className="consTitle p-6 w-full bg-blue-600 grid place-items-center ">
             <h1 className="text-white text-2xl">Consignment Tracker</h1>
