@@ -16,7 +16,8 @@ const App = () => {
   const [close, setClose] = useState(false);
 
   const notify = () => toast.error("Something Went Wrong");
-  const notifyEnterSomeValue = () => toast.error("Tracking no. must have atleast 1 character");
+  const notifyEnterSomeValue = () =>
+    toast.error("Tracking no. must have atleast 1 character");
 
   const handleChange = (e) => {
     setConsignmentNum(e.target.value.toUpperCase());
@@ -29,9 +30,9 @@ const App = () => {
 
   const getStatus = async () => {
     try {
-      if(consignmentNum.length == 0) {
-        notifyEnterSomeValue() ;
-        return ;
+      if (consignmentNum.length == 0) {
+        notifyEnterSomeValue();
+        return;
       }
 
       const res = await fetch(
@@ -47,7 +48,7 @@ const App = () => {
       );
 
       let data = await res.json();
-      console.log(data) ;
+      console.log(data);
       data = JSON.parse(data);
 
       const details = data.cnmtDetail[0];
@@ -69,7 +70,6 @@ const App = () => {
       setWeight(details.WEIGHT + " kg");
       setClose(false);
       setConsignmentNum("");
-      
     } catch (err) {
       notify();
     }
@@ -88,6 +88,11 @@ const App = () => {
               <input
                 onChange={handleChange}
                 value={consignmentNum}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    getStatus();
+                  }
+                }}
                 type="text"
                 className="w-full px-3 bg-white outline-none border-1 border-[#c9c9c9] text-black h-14 rounded-l-xl"
                 placeholder="e.g. ABCXXXX"
@@ -151,7 +156,7 @@ const App = () => {
           </div>
           <div className="col w-full flex flex-row justify-between">
             <h1>No. of Packages</h1>
-            <h1 >{numOfPkg} Units</h1>
+            <h1>{numOfPkg} Units</h1>
           </div>
           <div className="col w-full flex flex-row justify-between">
             <h1>Weight</h1>
