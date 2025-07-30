@@ -78,8 +78,8 @@ const App = () => {
   return (
     <div>
       <div className="back-img md:p-0 p-10 w-full h-screen grid place-items-center poppins-medium overflow-hidden relative">
-        <div className="track-box w-full md:w-1/3 bg-[#fff] backdrop-blur-md border-white/20 shadow-lg rounded-xl">
-          <div className="consTitle p-6 w-full bg-blue-600 grid place-items-center rounded-t-xl">
+        <div className="track-box w-full md:w-1/3 bg-[#fff] backdrop-blur-md border-white/20 shadow-lg">
+          <div className="consTitle p-6 w-full bg-blue-600 grid place-items-center ">
             <h1 className="text-white text-2xl">Consignment Tracker</h1>
           </div>
           <div className="track-right flex flex-col p-7">
@@ -94,14 +94,14 @@ const App = () => {
                   }
                 }}
                 type="text"
-                className="w-full px-3 bg-white outline-none border-1 border-[#c9c9c9] text-black h-14 rounded-l-xl"
+                className="w-full px-3 bg-white outline-none border-1 border-[#c9c9c9] text-black h-14 "
                 placeholder="e.g. ABCXXXX"
               />
               <button
                 onClick={() => {
                   getStatus();
                 }}
-                className="bg-blue-600 text-white w-1/2 h-14 cursor-pointer hover:bg-blue-800 duration-400 rounded-r-xl"
+                className="bg-blue-600 text-white w-1/2 h-14 cursor-pointer hover:bg-blue-800 duration-400"
               >
                 Track
               </button>
@@ -111,7 +111,7 @@ const App = () => {
         <div
           className={`shipmentDets flex-col w-full md:w-1/3 bg-white ${
             close ? "hidden" : ""
-          } px-10 py-6 rounded-xl gap-5 absolute ${
+          } px-10 py-6 gap-5 absolute ${
             !isVisible ? "hidden" : "flex"
           }`}
         >
