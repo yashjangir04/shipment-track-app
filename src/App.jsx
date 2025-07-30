@@ -77,8 +77,8 @@ const App = () => {
 
   return (
     <div>
-      <div className="back-img w-full h-screen grid place-items-center poppins-medium overflow-hidden relative">
-        <div className="track-box w-1/3 bg-[#fff] backdrop-blur-md border-white/20 shadow-lg rounded-xl">
+      <div className="back-img md:p-0 p-10 w-full h-screen grid place-items-center poppins-medium overflow-hidden relative">
+        <div className="track-box w-full md:w-1/3 bg-[#fff] backdrop-blur-md border-white/20 shadow-lg rounded-xl">
           <div className="consTitle p-6 w-full bg-blue-600 grid place-items-center rounded-t-xl">
             <h1 className="text-white text-2xl">Consignment Tracker</h1>
           </div>
@@ -104,7 +104,7 @@ const App = () => {
           </div>
         </div>
         <div
-          className={`shipmentDets flex-col w-1/3  bg-white ${
+          className={`shipmentDets flex-col w-full md:w-1/3 bg-white ${
             close ? "hidden" : ""
           } px-10 py-6 rounded-xl gap-5 absolute ${
             !isVisible ? "hidden" : "flex"
