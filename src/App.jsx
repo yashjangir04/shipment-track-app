@@ -19,7 +19,7 @@ const App = () => {
   const notifyEnterSomeValue = () => toast.error("Tracking no. must have atleast 1 character");
 
   const handleChange = (e) => {
-    setConsignmentNum(e.target.value);
+    setConsignmentNum(e.target.value.toUpperCase());
   };
 
   const capitalize = (str) => {
