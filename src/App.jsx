@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { use, useState } from "react";
 import { IoMdCloseCircle } from "react-icons/io";
 import { ToastContainer, toast, Bounce } from "react-toastify";
 
@@ -109,10 +109,10 @@ const App = () => {
           </div>
         </div>
         <div
-          className={`shipmentDets flex-col w-full md:w-1/3 bg-white ${
+          className={`shipmentDets flex-col w-full h-full md:h-fit md:w-1/3 bg-white ${
             close ? "hidden" : ""
           } px-10 py-6 gap-5 absolute ${
-            !isVisible ? "hidden" : "flex"
+            !isVisible ? "right-[100%]" : "flex element"
           }`}
         >
           <div className="consHeading flex flex-row justify-between items-center relative">
