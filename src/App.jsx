@@ -90,7 +90,7 @@ const App = () => {
                 value={consignmentNum}
                 type="text"
                 className="w-full px-3 bg-white outline-none border-1 border-[#c9c9c9] text-black h-14 rounded-l-xl"
-                placeholder="e.g. BWDXXXX"
+                placeholder="e.g. ABCXXXX"
               />
               <button
                 onClick={() => {
