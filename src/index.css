@@ -2,9 +2,9 @@
 @import "tailwindcss";
 
 .back-img {
-    background-image: url("/truck-bg.png");
-    background-size: cover;
-    background-position: top left;
+    background-image: url("/trucks.png");
+    background-size: contain;
+    background-position: bottom;
 }
 
 .poppins-medium {
